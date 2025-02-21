@@ -16,19 +16,22 @@ public class TestGaulois {
 		Romain minus = new Romain("Minus", 6);
 		System.out.println("Dans la forêt " + asterix.getNom() + " et " + obelix.getNom()
 				+ "tombe nez à nez sur le romain " + minus.getNom());
-		for (int i=0;i<3;i++) {
+		for (int i = 0; i < 3; i++) {
 			asterix.frapper(minus);
-		
+
 		}
-		Romain brutus=new Romain("brutus", 14); 
+
+		Romain brutus = new Romain("Brutus", 14);
 		Druide panoramix = new Druide(2, "panoramix");
 		panoramix.fabriquerPotion(4, 3);
 		panoramix.booster(obelix);
 		panoramix.booster(asterix);
-		for (int i=0;i<3;i++) {
+		for (int i = 0; i < 3; i++) {
 			asterix.frapper(brutus);
-		
+			// System.out.println("la force de brutus est devneu:" + brutus.getForce());
+
 		}
+
 	}
 
 }

@@ -13,6 +13,10 @@ public class Romain {
 		return nom;
 	}
 
+	public int getForce() {
+		return force;
+	}
+
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 
@@ -26,9 +30,11 @@ public class Romain {
 		// TODO Auto-generated method stub
 		this.force = this.force - forceCoup;
 		if (force < 1) {
-			parler("J'abanndonne");
+			this.force = 0;
+			parler("J'abanndonne !");
 
 		} else {
+
 			parler("Aïe");
 		}
 

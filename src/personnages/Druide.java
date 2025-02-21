@@ -19,7 +19,7 @@ public class Druide {
 		super();
 		this.force = force;
 		this.nom = nom;
-	//	this.chaudron = chaudron;
+		// this.chaudron = chaudron;
 	}
 
 	private String prendreParole() {
@@ -29,23 +29,23 @@ public class Druide {
 
 	public void fabriquerPotion(int quantite, int forcePotion) {
 		chaudron.remplirChaudron(quantite, forcePotion);
-		parler("j'ai concocté" + quantite + "doses de potion magique. Elle a une force de " + forcePotion + ".");
+		parler("j'ai concocté " + quantite + " doses de potion magique. Elle a une force de " + forcePotion + ".");
 	}
 
 	public void booster(Gaulois gaulois) {
 		boolean contientPotion = chaudron.resterPotion();
 		String nomGaulois = gaulois.getNom();
 		if (contientPotion) {
-			if (nom.equals("Obélix")) {
+			if (nomGaulois.equals("Obélix")) {
 				parler("Non, " + nomGaulois + " Non!...Et tu sais très bien! ");
 			} else {
 				int forcePotion = chaudron.prndrelouche();
 				gaulois.boirePotion(forcePotion);
-				parler("Tiens " + nomGaulois + "un peu de potion magique ");
-				
+				parler("Tiens " + nomGaulois + " un peu de potion magique ");
+
 			}
-		}else {
-			parler("Desolé " + nomGaulois + "il n'y a plus une seule goutte de potion");
+		} else {
+			parler("Desolé " + nomGaulois + " il n'y a plus une seule goutte de potion");
 		}
 
 	}
