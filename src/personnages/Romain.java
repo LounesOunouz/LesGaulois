@@ -21,4 +21,16 @@ public class Romain {
 	public String prendreParole() {
 		return "Le romain " + nom + ": ";
 	}
+
+	public void recevoirCoup(int forceCoup) {
+		// TODO Auto-generated method stub
+		this.force = this.force - forceCoup;
+		if (force < 1) {
+			parler("J'abanndonne");
+
+		} else {
+			parler("Aïe");
+		}
+
+	}
 }
