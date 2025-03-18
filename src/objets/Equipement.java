@@ -1,4 +1,4 @@
-package Objets;
+package objets;
 
 public enum Equipement {
 	

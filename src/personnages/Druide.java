@@ -1,6 +1,6 @@
 package personnages;
 
-import Objets.Chaudron;
+import objets.Chaudron;
 
 public class Druide {
 	private int force;
@@ -9,6 +9,13 @@ public class Druide {
 
 	public String getNom() {
 		return nom;
+	}
+
+	public Druide(String nom, int force, Chaudron chaudron) {
+		super();
+		this.force = force;
+		this.nom = nom;
+		this.chaudron = chaudron;
 	}
 
 	public void parler(String texte) {
@@ -47,6 +54,11 @@ public class Druide {
 		} else {
 			parler("Desolé " + nomGaulois + " il n'y a plus une seule goutte de potion");
 		}
+
+	}
+
+	public void preparerPotion() {
+		fabriquerPotion(1, 10);
 
 	}
 }
